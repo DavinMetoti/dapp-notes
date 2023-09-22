@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,600;1,700&family=Poppins:wght@500&family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+} */
+
+.navbar {
+    background: linear-gradient(90deg, rgba(18, 72, 107, 1) 0%, rgba(65, 145, 151, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    padding: 20px 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.text-logo {
+    margin-left: 1rem;
+}
+
+.search-container {
+    margin: auto 2rem;
+    background: #fff;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover>.search-input {
+    width: 300px;
+}
+
+.search-container .search-input:not(:placeholder-shown),
+.search-container .search-input:focus {
+    width: 300px;
+}
+
+.search-container .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas {
+    color: #5cbdbb;
+}
+
+.search-container:hover {
+    animation: 0.15s linear 3;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.form-container {
+    display: block;
+}
+
+.container {
+    background: #fff;
+    padding: 25px 40px 10px 40px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .text {
+    text-align: center;
+    font-size: 41px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    background: #419197;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container form {
+    padding: 30px 0 0 0;
+}
+
+.container form .form-row {
+    display: flex;
+    margin: 32px 0;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-data input:focus~label,
+.textarea textarea:focus~label,
+.input-data input:valid~label,
+.textarea textarea:valid~label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #3498db;
+}
+
+.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before,
+.textarea textarea:focus~.underline:before,
+.textarea textarea:valid~.underline:before {
+    transform: scale(1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    height: 3rem;
+    width: 14rem;
+    background: #419197;
+    transition: all 0.4s;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.384);
+}
+
+.button-delete {
+    color: white;
+    border-style: none;
+    background-color: #e41749;
+    padding: 7px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.title-container {
+    margin-bottom: 1rem;
+}
+
+.button-arsip {
+    border-style: none;
+    background-color: #f2a500;
+    padding: 7px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content-title {
+    color: #12486B;
+}
+
+.text-content {
+    overflow-y: auto;
+    height: 20rem;
+    padding: 10px;
+}
+
+.container-content {
+    margin-top: 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    text-align: center;
+}
+
+.content-date {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-weight: bold;
+    color: #419197;
+}
+
+.content-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.title {
+    background-color: #419197;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+
+@media (max-width: 700px) {
+    .container .text {
+        font-size: 30px;
+    }
+
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container form {
+        padding: 10px 0 0 0;
+    }
+
+    .container form .form-row {
+        display: block;
+    }
+
+    form .form-row .input-data {
+        margin: 35px 0 !important;
+    }
+
+    .submit-btn .input-data {
+        width: 40% !important;
+    }
+}
